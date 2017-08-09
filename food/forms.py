@@ -1,10 +1,9 @@
 #food/forms.py
 from django import forms
+from .models import Restaurant
 
-from .models import Food
-
-class PostForm(forms.ModelForm):
+class PostModelForm(forms.ModelForm):
 
     class Meta:
-        model = Food
-        fields = ('', 'text',)
+        model = Restaurant
+        fields = '__all__' 
