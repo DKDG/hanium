@@ -10,10 +10,10 @@ def main(request):
     qs = Restaurant.objects.all()
     query = request.GET.get('query', '')
     if query:
-        condition = Q(title__icontains=query) | Q(content__icontains=query)
+        condition = Q(title__icontains=query) | Q(location__icontains=query)
         qs = qs.filter(condition)
     return render(request, 'food/main.html', {
-        'post_list': qs,
+        'rest_list': qs,
         'query': query,
     })
 
@@ -28,4 +28,4 @@ def contact(request):
 
 def post_detail(request, pk):
     restaurant = get_object_or_404(Restaurant, pk=pk)
-    return render(request, 'blog/post_detail.html', {'restaurant': restaurant})
+    return render(request, 'food/post_detail.html', {'restaurant': restaurant})

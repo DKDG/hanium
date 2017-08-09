@@ -7,13 +7,14 @@
             <div class="col-lg-12">
                 <h2 class="page-header">Recent Post</h2>
             </div>
-            {% for rest in restaurant %}            
+            {% for rest in rest_list %}            
             <div class="col-md-4 col-sm-6">
-                <a href="{% url "food:post_detail" res.id %}">
-                    {{rest.title}}
+                    <h3><a href="{% url "food:post_detail" pk=rest.pk %}">
+                        {{ rest.title }}
+                    </a></h3>
                     <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
                 </a>
             </div>
         </div>
             {% endfor %}
-{% endblock%}
+{% endblock %}
