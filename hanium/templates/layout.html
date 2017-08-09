@@ -60,7 +60,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="portfolio-1-col.html">역세권</a>
+                                <a href="{% url 'food:subway' %}">역세권</a>
                             </li>
                             <li>
                                 <a href="portfolio-2-col.html">대학가</a>
@@ -173,7 +173,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>역세권</h4>
+                        <h4><i class="fa fa-fw fa-check"></i><a href="{% url 'food:subway' %}">역세권</a></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -184,7 +184,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i>대학가</h4>
+                        <h4><i class="fa fa-fw fa-gift"></i><a href="{% url 'food:university' %}">대학가</a></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -195,7 +195,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i>지역별</h4>
+                        <h4><i class="fa fa-fw fa-compass"></i><a href="{% url 'food:region' %}">지역별</a></h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -211,36 +211,13 @@
             <div class="col-lg-12">
                 <h2 class="page-header">Recent Posting</h2>
             </div>
+            {% for content in contents %}
             <div class="col-md-4 col-sm-6">
                 <a href="portfolio-item.html">
                     <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
+            {% endfor %}
         </div>
         <!-- /.row -->
       {% endblock %}
