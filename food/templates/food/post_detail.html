@@ -13,8 +13,7 @@
                     </small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="{% url  "food:main" %}">Home</a>
-                    </li>
+                    <li><a href="{% url  "food:main" %}">Home</a></li>
                     <li class="active">혼밥식당 포스팅</li>
                 </ol>
             </div>
@@ -43,12 +42,14 @@
 
                 <!-- Post Content -->
                 <p class="lead">{{restaurant.title}}</p>
-                <p>{{restaurant.tag}}</p>
-                <p><img class="img-responsive" src="{{restaurant.food_image}}" alt=""></p>
-                <p><img class="img-responsive" src="{{restaurant.res_image}}" alt=""></p>
-                <p>{{restaurant.opentime }}</p>
-                <p>{{restaurant.menuinfo}}</p>            
-
+                <p>#태그 {{restaurant.tag}}</p>
+                <p>음식 사진<img class="img-responsive" src="{{restaurant.food_image}}" width="150" height="150" alt=""></p>
+                <p>식당 사진<img class="img-responsive" src="{{restaurant.res_image}}" width="150" height="150" alt=""></p>
+                
+                <ul>
+                    <li><p>오픈시간{{restaurant.opentime }}</p></li>     
+                    <li><p>메뉴{{restaurant.menuinfo}}</p> </li>         
+                </ul>
                 <hr>
 
                 <!-- Blog Comments -->
@@ -74,7 +75,7 @@
                         <img class="media-object" src="http://placehold.it/64x64" alt="">
                     </a>
                     <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
+                        <h4 class="media-heading">Hanium Project
                             <small>August 25, 2014 at 9:30 PM</small>
                         </h4>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
@@ -114,7 +115,7 @@
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    <h4>Blog Search</h4>
+                    <h4>Website Search</h4>
                     <div class="input-group">
                         <input type="text" class="form-control">
                         <span class="input-group-btn">
@@ -126,30 +127,15 @@
 
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    <h4>Blog Categories</h4>
+                    <h4>Categories</h4>
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
+                                <li><a href="#">역세권</a>
                                 </li>
-                                <li><a href="#">Category Name</a>
+                                <li><a href="#">지역별</a>
                                 </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
+                                <li><a href="#">대학가</a>
                             </ul>
                         </div>
                     </div>
@@ -158,8 +144,8 @@
 
                 <!-- Side Widget Well -->
                 <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    <h4>Website Description</h4>
+                    <p>Hanium Project. 혼밥에 적합한 식당정보를 크롤링해서 보여드리겠습니다 :)</p>
                 </div>
 
             </div>
@@ -168,16 +154,5 @@
         <!-- /.row -->
 
         <hr>
-
-<div class="container">
-     <div class="row">
-         <div class="col-lg-12">
-            <h4>포스트 디테일입니다.</h4>
-                {{ restaurant.title }}
-                {{ restaurant.location|linebreaks }}
-                <a href="{% url "food:main" %}" class="btn btn-primary">목록</a>
-         </div>
-     </div>
-</div>
 {% endblock %}
 

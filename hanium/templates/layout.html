@@ -109,19 +109,19 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="fill" style="background-image:url('https://envato-shoebox-0.imgix.net/fb3c/0475-918d-4843-8f13-1856932a995e/965+(4).jpg?w=1200&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=365465412865b17b6e2ee26596381112');"></div>
                 <div class="carousel-caption">
                     <h2>오늘의 추천 식당</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="fill" style="background-image:url('https://envato-shoebox-0.imgix.net/a5a7/5371-9e1e-4b9c-97d3-ebcbc39f66fd/DSC_2458.jpg?w=1200&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=4cdb7b5cee204083759ac7705bf38d52');"></div>
                 <div class="carousel-caption">
                     <h2>오늘은 이 메뉴 어때?</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="fill" style="background-image:url('https://envato-shoebox-0.imgix.net/77de/4dea-03d6-4f47-9874-e8d340b23e2c/788+(1).jpg?w=1200&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=56a7bdc205e5ea53543d478f7ea76c64');"></div>
                 <div class="carousel-caption">
                     <h2>건강도 챙깁시다</h2>
                 </div>
@@ -152,7 +152,7 @@
                                 <h1 class="text-center">혼밥 식당 검색</h1>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input class="form-control" type="text" name="search" placeholder="ex)강남역" required/>
+                                        <input class="form-control" type="text" name="search" value="{{query}}" placeholder="ex)강남역" required/>
                                         <span class="input-group-btn">
                                             <button class="btn btn-success" type="submit">
                                                 <span class="glyphicon glyphicon-search" aria-hidden="true">
@@ -176,7 +176,8 @@
                         <h4><i class="fa fa-fw fa-check"></i><a href="{% url 'food:subway' %}">역세권</a></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p><img src="{% static "img/subway.png"%}" width="100" height="100"></p>
+                        <p>역세권에 있는 식당을 추천해드립니다.</p>
                         <a href="#" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
@@ -187,7 +188,8 @@
                         <h4><i class="fa fa-fw fa-gift"></i><a href="{% url 'food:university' %}">대학가</a></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p><img src="{% static "img/university.png"%}" width="100" height="100"></p>
+                        <p>대학가에서 인기 있는 식당을 추천해드립니다.</p>
                         <a href="#" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
@@ -198,7 +200,8 @@
                         <h4><i class="fa fa-fw fa-compass"></i><a href="{% url 'food:region' %}">지역별</a></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p><img src="{% static "img/region.png"%}" width="100" height="100"></p>
+                        <p>지역별로 식당을 추천해드립니다.</p>
                         <a href="#" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
