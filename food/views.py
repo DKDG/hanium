@@ -3,7 +3,7 @@ import datetime
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Restaurant
-from .forms import PostModelForm
+from .forms import PostModelForm, CommentModelForm
 # Create your views here.
 
 def main(request):
@@ -29,3 +29,4 @@ def contact(request):
 def post_detail(request, pk):
     restaurant = get_object_or_404(Restaurant, pk=pk)
     return render(request, 'food/post_detail.html', {'restaurant': restaurant})
+

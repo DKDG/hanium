@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^university$', views.contact, name='university'),
     url(r'^region$', views.contact, name='region'),
     url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
+    #url(r'^post/(?P<pk>\d+)/comments/$', views.comment_view, name='comment_view'),
    
 
 ]

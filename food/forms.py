@@ -1,6 +1,6 @@
 #food/forms.py
 from django import forms
-from .models import Restaurant
+from .models import Restaurant, Comment
 
 ''' author = models.CharField(max_length=20, help_text='포스팅 작성자 이름을 입력해주세요.')
     title = models.CharField(max_length=100, validators=[min_length_3], help_text='제목을 3글자 이상 입력하세요')
@@ -18,3 +18,11 @@ class PostModelForm(forms.ModelForm):
     class Meta:
         model = Restaurant
         fields = '__all__' 
+
+
+class CommentModelForm(forms.ModelForm):
+
+    class Meta:
+        model = Comment
+        #fields = '__all__'
+        fields = ('author', 'message')

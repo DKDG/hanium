@@ -39,3 +39,10 @@ class Restaurant(models.Model):
         return self.title
 
 
+class Comment(models.Model):
+    post = models.ForeignKey(Restaurant)
+    author = models.CharField(max_length = 10)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
